@@ -1,0 +1,132 @@
+a:link {color:#393939;}
+a:visited {color:#393939;}
+a:hover {color:#393939;}
+a:active {color:#393939;}
+.Wp-Artistic-Body-P
+{
+    margin:0.0px 0.0px 0.0px 0.0px; text-align:left; font-weight:400;
+}
+.Wp-Body-P
+{
+    margin:0.0px 0.0px 12.0px 0.0px; text-align:left; font-weight:400;
+}
+.Wp-Bullet-List-P
+{
+    margin:0.0px 0.0px 12.0px 48.0px; text-align:left; font-weight:400; text-indent:-15.0px;
+}
+.Wp-Footer-P
+{
+    margin:0.0px 0.0px 0.0px 0.0px; text-align:center; font-weight:400;
+}
+.Wp-Header-P
+{
+    margin:0.0px 0.0px 0.0px 0.0px; text-align:center; font-weight:400;
+}
+.Wp-Header-and-Footer-P
+{
+    margin:0.0px 0.0px 0.0px 0.0px; text-align:center; font-weight:400;
+}
+.Wp-Heading-1-P
+{
+    margin:32.0px 0.0px 4.0px 0.0px; text-align:center; font-weight:400;
+}
+.Wp-Heading-2-P
+{
+    margin:20.0px 0.0px 4.0px 0.0px; text-align:left; font-weight:400;
+}
+.Wp-Heading-3-P
+{
+    margin:12.0px 0.0px 0.0px 0.0px; text-align:left; font-weight:400;
+}
+.Wp-Heading-4-P
+{
+    margin:20.0px 0.0px 0.0px 0.0px; text-align:left; font-weight:400;
+}
+.Wp-Heading-5-P
+{
+    margin:16.0px 0.0px 0.0px 0.0px; text-align:left; font-weight:400;
+}
+.Wp-Heading-6-P
+{
+    margin:12.0px 0.0px 0.0px 0.0px; text-align:left; font-weight:400;
+}
+.Wp-Headings-P
+{
+    margin:0.0px 0.0px 0.0px 0.0px; text-align:left; font-weight:400;
+}
+.Wp-Indented-P
+{
+    margin:0.0px 0.0px 12.0px 48.0px; text-align:left; font-weight:400;
+}
+.Wp-Lists-P
+{
+    margin:0.0px 0.0px 12.0px 24.0px; text-align:left; font-weight:400;
+}
+.Wp-Normal-P
+{
+    margin:0.0px 0.0px 0.0px 0.0px; text-align:left; font-weight:400;
+}
+.Wp-Note-P
+{
+    margin:0.0px 0.0px 12.0px 0.0px; text-align:left; font-weight:400;
+}
+.Wp-Numbered-List-P
+{
+    margin:0.0px 0.0px 12.0px 48.0px; text-align:left; font-weight:400; text-indent:-12.0px;
+}
+.Wp-Quote-P
+{
+    margin:12.0px 48.0px 12.0px 48.0px; text-align:left; font-weight:400;
+}
+.Wp-Strong-Quote-P
+{
+    margin:12.0px 48.0px 12.0px 48.0px; text-align:left; font-weight:400;
+}
+.Wp-Subtitle-P
+{
+    margin:0.0px 0.0px 12.0px 0.0px; text-align:left; font-weight:400;
+}
+.Wp-Table-Body-P
+{
+    margin:0.0px 0.0px 12.0px 0.0px; text-align:left; font-weight:400;
+}
+.Wp-Title-P
+{
+    margin:0.0px 0.0px 20.0px 0.0px; text-align:left; font-weight:400;
+}
+.Wp-Code-C
+{
+    font-family:"Courier New", monospace;
+}
+.Wp-Default-Paragraph-Font-C
+{
+    font-family:"Verdana", sans-serif;
+}
+.Wp-Emphasis-C
+{
+    font-family:"Verdana", sans-serif; font-style:italic;
+}
+.Wp-Keyword-C
+{
+    font-family:"Courier New", monospace; font-weight:700;
+}
+.Wp-Placeholder-C
+{
+    font-family:"Verdana", sans-serif;
+}
+.Wp-Reference-C
+{
+    font-family:"Verdana", sans-serif; font-variant:small-caps;
+}
+.Wp-Strong-C
+{
+    font-family:"Verdana", sans-serif; font-weight:700;
+}
+.Wp-Strong-Emphasis-C
+{
+    font-family:"Verdana", sans-serif; font-style:italic; font-weight:700;
+}
+.Wp-Strong-Reference-C
+{
+    font-family:"Verdana", sans-serif; font-style:italic; font-weight:700; font-variant:small-caps;
+}
