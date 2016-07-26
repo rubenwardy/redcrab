@@ -6,7 +6,7 @@ var global_navtree = WpNavBar.readTree({
 },
 {   'sTitle':'About',
     'bIsWebPath':true,
-    'sUrl':'map/index.php'
+    'sUrl':'map/index.html'
 },
 {   'sTitle':'Map 1 - Center',
     'bIsWebPath':true,
