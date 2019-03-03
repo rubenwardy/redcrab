@@ -1,0 +1,66 @@
+---
+---
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{{ page.title }}</title>
+
+		<link href="https://rubenwardy.com/static/style.css" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700'
+				rel='stylesheet' type='text/css'>
+		<link rel="icon" href="https://rubenwardy.com/favicon.ico" type="image/x-icon"/>
+		<link rel="shortcut icon" href="https://rubenwardy.com/favicon.ico" type="image/x-icon"/>
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+		<![endif]-->
+		<style>
+			header {
+				background: url("{{ page.root }}/background.png");
+			}
+
+			header h1 {
+				font-size: 400%;
+				margin: 0.4em 0;
+			}
+
+			header h1, header span {
+				margin-left: 20px;
+			}
+
+			header a {
+				color: white;
+				margin: 0 10px;
+			}
+
+			header span a:first-child {
+				margin-left: 4px;
+			}
+
+			main img {
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="container">
+			<h1>Redcrab</h1>
+
+			<span>
+				<a href="{{ page.root }}">About</a>
+				<a href="{{ page.root }}#maps">Maps</a>
+			</span>
+		</header>
+		<main>
+			<!-- <h1><a href="../">Redcrab</a> &gt; Downloads</h1> -->
+			{{ content }}
+		</main>
+	</body>
+</html>
