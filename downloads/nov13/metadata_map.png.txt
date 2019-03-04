@@ -1,0 +1,5 @@
+BaseName: map.png
+NumTiles: 53 45
+MinTile: -23 -15
+TileSize: 1024 1024
+Zoom: 1

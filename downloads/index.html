@@ -16,4 +16,33 @@ root: ../
 	Manually collected incomplete snapshot | 110MB |
 	<a href="https://minetest.rubenwardy.com/redcrab_nov13.zip">Download (.zip)</a>
 </p>
-<img src="nov13.png">
+
+<link rel="stylesheet" href="{{ page.root }}leaflet.css" />
+<script src="{{ page.root }}leaflet.js"></script>
+<style> .labelclass{position: absolute; background: rgba(255,0,255,0); font-size:20px;}</style>
+<div id="mapid" style="width: 100%; height: 500px;"></div>
+<script>
+	var MineTestMap = L.map('mapid', {
+	crs: L.CRS.Simple,
+	});
+	MineTestMap.setView([0.0, 0.0], 5);
+	L.tileLayer('nov13/{z}_{x}_{y}_map.jpg', {
+		minNativeZoom: 0,
+		maxNativeZoom: 5,
+		attribution: 'Minetest World',
+		tileSize: 1024,
+		errorTileUrl: "nov13/empty_tile_map.jpg",
+		}).addTo(MineTestMap);
+	var popup = L.popup();
+	var mapZoom = 0.031250;
+	function onMapClick(e) {
+		var scaledPos = L.latLng(e.latlng.lat / mapZoom, e.latlng.lng / mapZoom);
+		popup
+			.setLatLng(e.latlng)
+			.setContent("You clicked the map at "+ scaledPos.toString())
+			.openOn(MineTestMap);
+	}
+	MineTestMap.on('click', onMapClick);
+</script>
+<script src="markers.js" defer></script></body>
+</html>
