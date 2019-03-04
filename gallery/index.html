@@ -2,6 +2,9 @@
 title: Gallery
 layout: default
 root: ../
+landmarks:
+- caption: Lighthouse
+  url: lighthouse.png
 images:
 - caption: Saren Mansion, my first build
   url: saren_mansion.png
@@ -17,9 +20,20 @@ images:
   url: tower.png
 ---
 
+<h2>Landmarks</h2>
+
+<div class="gallery">
+{% for img in page.landmarks %}
+	<a href="{{ img.url }}">
+		<img src="{{ img.url | replace:'.png','_thumb.jpg' }}" alt="{{ img.caption }}" />
+		<span>{{ img.caption }}</span>
+	</a>
+{% endfor %}
+</div>
+
 <h2>My Builds</h2>
 
-<div id="gallery">
+<div class="gallery">
 {% for img in page.images %}
 	<a href="{{ img.url }}">
 		<img src="{{ img.url | replace:'.png','_thumb.jpg' }}" alt="{{ img.caption }}" />
