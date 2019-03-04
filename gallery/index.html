@@ -1,0 +1,29 @@
+---
+title: Gallery
+layout: default
+root: ../
+images:
+- caption: Saren Mansion, my first build
+  url: saren_mansion.png
+- caption: Ruben Express store
+  url: ru_store.png
+- caption: Private residence
+  url: r.png
+- caption: Advert for shop
+  url: ad.png
+- caption: Tower in Nameless Town
+  url: tower2.png
+- caption: Tower in Nameless Town
+  url: tower.png
+---
+
+<h2>My Builds</h2>
+
+<div id="gallery">
+{% for img in page.images %}
+	<a href="{{ img.url }}">
+		<img src="{{ img.url | replace:'.png','_thumb.jpg' }}" alt="{{ img.caption }}" />
+		<span>{{ img.caption }}</span>
+	</a>
+{% endfor %}
+</div>

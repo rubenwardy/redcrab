@@ -45,7 +45,42 @@
 			}
 
 			main img {
-				width: 100%;
+				max-width: 100%;
+			}
+
+			#gallery {
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: row;
+				flex-grow: 1;
+				flex-shrink: 1;
+				padding: 0;
+				margin: 0 -10px;
+			}
+
+			#gallery a {
+				flex: 1;
+				display: block;
+				padding: 0;
+				margin: 10px;
+				min-width: 370px;
+				max-width: 470px;
+			}
+
+			#gallery a:hover {
+				text-decoration: none;
+			}
+
+			#gallery a img {
+				display: block;
+				border-radius: 8px;
+			}
+
+			#gallery a span {
+				display: block;
+				margin: 10px;
+				color: white;
+				text-align: center;
 			}
 		</style>
 	</head>
@@ -56,6 +91,7 @@
 			<span>
 				<a href="{{ page.root }}">About</a>
 				<a href="{{ page.root }}#maps">Maps</a>
+				<a href="{{ page.root }}gallery">Gallery</a>
 			</span>
 		</header>
 		<main>
