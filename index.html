@@ -1,22 +1,108 @@
 ---
-title: About
+title: Redcrab
 layout: default
-redirect_from: /maps/
+redirect_from:
+ - /maps/
+ - /downloads/
+ - /gallery/
 ---
 
-<p>
-	Redcrab was a very popular server during late 2011-2013, and was played on by nearly
-	all of the current long time members.
-</p>
+<section>
+	<h1 id="gallery">About</h1>
+	<p>
+		Redcrab was a very popular Minetestserver during late 2011-2013, and
+		was played on by nearly all of the current long time members.
+	</p>
+</section>
 
-<h2 id="maps">Maps</h2>
-<p>
-	Note that Redcrab started to drop in users after 2012.
-	There isn't too much difference between these two maps.
-</p>
-<ul>
-	<li><a href="old">Redcrab official maps (12/April/2015)</a></li>
-	<li><a href="old-interactive">Redcrab server guide by rubenwardy (18/December/2012)</a></li>
-</ul>
+<section>
+	<h1 id="gallery">Gallery</h1>
 
-<a href="old"><img src="old/preview.png" alt="Preview map" style="margin-top: 20px;" /></a>
+	<h2>Landmarks</h2>
+	<div class="gallery">
+	{% for img in site.data.gallery.landmarks %}
+		<a href="gallery/{{ img.url }}">
+			<img src="gallery/{{ img.url | replace:'.png','_thumb.jpg' }}" alt="{{ img.caption }}" />
+			<span>{{ img.caption }}</span>
+		</a>
+	{% endfor %}
+	</div>
+
+	<h2>My Builds</h2>
+	<div class="gallery">
+	{% for img in site.data.gallery.images %}
+		<a href="gallery/{{ img.url }}">
+			<img src="gallery/{{ img.url | replace:'.png','_thumb.jpg' }}" alt="{{ img.caption }}" />
+			<span>{{ img.caption }}</span>
+		</a>
+	{% endfor %}
+	</div>
+</section>
+
+<section>
+	<h1 id="maps">Maps</h1>
+	<p>
+		Note that Redcrab started to drop in users after 2012.
+		There isn't too much difference between these two maps.
+	</p>
+	<ul>
+		<li><a href="old">Redcrab official maps (12/April/2015)</a></li>
+		<li><a href="old-interactive">Redcrab server guide by rubenwardy (18/December/2012)</a></li>
+	</ul>
+
+	<h2 id="leaflet">Backup map</h2>
+	<link rel="stylesheet" href="{{ page.root }}static/leaflet.css" />
+	<script src="{{ page.root }}static/leaflet.js"></script>
+	<style> .labelclass{position: absolute; background: rgba(255,0,255,0); font-size:20px;}</style>
+	<div id="mapid" style="width: 100%; height: 500px;"></div>
+	<script>
+		var MineTestMap = L.map('mapid', {
+		crs: L.CRS.Simple,
+		});
+		MineTestMap.setView([0.0, 0.0], 5);
+		L.tileLayer('nov13/{z}_{x}_{y}_map.jpg', {
+			minNativeZoom: 0,
+			maxNativeZoom: 5,
+			attribution: 'Minetest World',
+			tileSize: 1024,
+			errorTileUrl: "nov13/empty_tile_map.jpg",
+			}).addTo(MineTestMap);
+		var popup = L.popup();
+		var mapZoom = 0.031250;
+		function onMapClick(e) {
+			var scaledPos = L.latLng(e.latlng.lat / mapZoom, e.latlng.lng / mapZoom);
+			popup
+				.setLatLng(e.latlng)
+				.setContent("You clicked the map at "+ scaledPos.toString())
+				.openOn(MineTestMap);
+		}
+		MineTestMap.on('click', onMapClick);
+	</script>
+	<script src="{{ page.root }}static/markers.js" defer></script>
+</section>
+
+
+<section>
+	<h1 id="downloads">Downloads</h1>
+
+	<h2>Redcrab Game</h2>
+	<p>
+		A collection of mods used to run Redcrab | 2MB |
+		<a href="https://github.com/rubenwardy/redcrab_game">Github</a> |
+		<a href="https://github.com/rubenwardy/redcrab_game/archive/master.zip">Download (.zip)</a>
+	</p>
+
+	<h2>November 2013</h2>
+	<p>
+		Manually collected incomplete snapshot | 110MB |
+		<a href="https://minetest.rubenwardy.com/redcrab_nov13.zip">Download (.zip)</a>
+	</p>
+
+	<h2>This Website</h2>
+	<p>
+		The source behind this website |
+		<a href="https://github.com/rubenwardy/redcrab">Github</a> |
+		<a href="https://github.com/rubenwardy/redcrab/archive/master.zip">Download (.zip)</a>
+	</p>
+
+</section>

@@ -24,15 +24,14 @@
 		<style>
 			header {
 				background: url("{{ page.root }}static/background.png");
+				background-position: center;
+				background-size: cover;
+				margin-bottom: 3.25em;
 			}
 
 			header h1 {
 				font-size: 400%;
-				margin: 0.4em 0;
-			}
-
-			header h1, header span {
-				margin-left: 20px;
+				margin: 0 0 0.4em 0;
 			}
 
 			header a {
@@ -85,19 +84,20 @@
 		</style>
 	</head>
 	<body>
-		<header class="container">
-			<h1>Redcrab</h1>
+		<header>
+			<div class="container">
+				<h1>Redcrab</h1>
 
-			<span>
-				<a href="{{ page.root }}">About</a>
-				<a href="{{ page.root }}#maps">Maps</a>
-				<a href="{{ page.root }}gallery">Gallery</a>
-				<a href="{{ page.root }}downloads">Downloads</a>
-			</span>
+				<span>
+					<a href="{{ page.root }}">About</a>
+					<a href="{{ page.root }}#gallery">Gallery</a>
+					<a href="{{ page.root }}#downloads">Downloads</a>
+				</span>
+			</div>
 		</header>
-		<main>
-			<h1>{{ page.title }}</h1>
+		<main class="container">
 			{{ content }}
 		</main>
+		<footer></footer>
 	</body>
 </html>
